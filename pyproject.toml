@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cutlist-optimizer"
+version = "0.1.0"
+description = "2D guillotine cut-list optimizer with SVG cut diagrams"
+requires-python = ">=3.10"
+
+[project.scripts]
+cutlist = "cutlist.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
